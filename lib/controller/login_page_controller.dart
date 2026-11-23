@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:pas/models/login_model.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
-// import 'package:pas/routes.dart';
+import 'package:pas/routes.dart';
 
 class LoginController extends GetxController{
   TextEditingController txtUsername = TextEditingController();
@@ -31,7 +31,7 @@ class LoginController extends GetxController{
 
           if (loginModel.value!.status) {
             Get.snackbar("Berhasil", loginModel.value?.message ?? "Login Berhasil");
-            // Get.offNamed(Routes.mainMenu);
+            Get.offNamed(Routes.mainmenu);
           } else {
             Get.snackbar("Gagal", loginModel.value?.message ?? "Login Gagal");
           }
